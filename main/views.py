@@ -146,12 +146,9 @@ def upload_create(request):
         best_index.append(index[int(best[k][1])][0])
 
 
-    man = Musinsa_m.objects.all()
-    woman = Musinsa_w.objects
-
     context = {'upload_img': img, 'shoes_recommend': shoes_recommend,
                'codi_recommend': codi_recommend, 'similarity': best_similarity,
-               'index': best_index, 'man_data': man[1], 'woman_data': woman}
+               'index': best_index}
 
     return render(request, 'main/profile.html', context)
 
