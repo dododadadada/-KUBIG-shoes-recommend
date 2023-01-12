@@ -1,0 +1,8 @@
+
+
+<form action="{% url 'main:upload_create' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    이미지 <br>
+    <input type="file" name="image"><br>
+    <input type="submit" value="Submit" />
+</form>
