@@ -195,7 +195,7 @@ for i in range(427):
   if i in noshoes_m:
     features_m_resnet.append(None)
   else:
-    img = Image.open(f"C:/shoes/mysite/static/musinsa_image/man_shoes/man_{i}.jpg")
+    img = Image.open(f"/static/musinsa_image/man_shoes/man_{i}.jpg")
     fea = fe.extract(img)
     features_m_resnet.append(fea)
 #여성
@@ -206,7 +206,7 @@ for i in range(660):
   if i in noshoes_w:
     features_w_resnet.append(None)
   else:
-    img = Image.open(f"C:/shoes/mysite/static/musinsa_image/woman_shoes/woman_{i}.jpg")
+    img = Image.open(f"/static/musinsa_image/woman_shoes/woman_{i}.jpg")
     fea = fe.extract(img)
     features_w_resnet.append(fea)
 
