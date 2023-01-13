@@ -88,7 +88,7 @@ def upload_create(request):
     form.save()
     img = form.image.url
     #특징벡터 추출
-    img1 = Image.open('./' + str(img))
+    img1 = Image.open('.' + str(img))
     feature = fe.extract(img1)
     #유사한 신발 찾기
     #1. 남성 무신사
