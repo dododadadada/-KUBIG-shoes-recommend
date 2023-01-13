@@ -73,6 +73,8 @@ def downloadWomanMusinsa(request):
     </html>
     ''')
 
+man = Musinsa_m.objects
+
 def upload(request):
     return render(request,'main/upload.html')
 
@@ -144,6 +146,7 @@ def upload_create(request):
         best_similarity.append(best[k][0])
         sex.append(index[int(best[k][1])][1])
         best_index.append(index[int(best[k][1])][0])
+
 
 
     context = {'upload_img': img, 'shoes_recommend': shoes_recommend,
